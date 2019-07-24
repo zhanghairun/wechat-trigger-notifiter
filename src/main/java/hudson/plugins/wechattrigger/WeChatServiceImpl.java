@@ -65,8 +65,8 @@ public class WeChatServiceImpl implements WeChatService {
 
 				try {
 					JSONObject obj = JSONObject.parseObject(JSON.toJSONString(mapData));
-					//Object result2 = HttpClientService.sendPost(url, obj);
-					//logger.info("企业微信消息发送结果:" + result2);
+					Object result2 = HttpClientService.sendPost(url, obj);
+					logger.info("企业微信消息发送结果:" + result2);
 				} catch (Exception e) {
 					logger.info(e.getMessage());
 					e.printStackTrace();

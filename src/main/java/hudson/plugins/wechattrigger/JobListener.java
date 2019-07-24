@@ -1,5 +1,8 @@
 package hudson.plugins.wechattrigger;
 
+import java.util.Map;
+
+import javax.annotation.Nonnull;
 import hudson.Extension;
 import hudson.model.AbstractBuild;
 import hudson.model.Descriptor;
@@ -7,9 +10,6 @@ import hudson.model.Result;
 import hudson.model.TaskListener;
 import hudson.model.listeners.RunListener;
 import hudson.tasks.Publisher;
-
-import javax.annotation.Nonnull;
-import java.util.Map;
 
 /**
  * Created by Marvin on 16/10/7.
