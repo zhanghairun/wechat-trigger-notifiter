@@ -1,4 +1,4 @@
-package hudson.plugins.wechattrigger;
+package com.plugins.wechattrigger;
 
 /**
  * Created by Marvin on 16/10/8.

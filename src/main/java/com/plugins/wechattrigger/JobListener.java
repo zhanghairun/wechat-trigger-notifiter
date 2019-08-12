@@ -1,4 +1,4 @@
-package hudson.plugins.wechattrigger;
+package com.plugins.wechattrigger;
 
 import java.util.Map;
 

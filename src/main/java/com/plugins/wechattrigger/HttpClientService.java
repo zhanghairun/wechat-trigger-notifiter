@@ -1,4 +1,4 @@
-package hudson.plugins.wechattrigger;
+package com.plugins.wechattrigger;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -289,28 +289,4 @@ public class HttpClientService {
 			return null;
 		}
 	}
-
-	/*
-	 * public static void main(String[] args) throws Exception { String url =
-	 * "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=65da6c76-8097-4ee5-b519-fe1e4c1bd61f";
-	 * 
-	 * Map<String, Object> map = new HashMap<String, Object>(); Map<String, Object>
-	 * map1 = new HashMap<String, Object>(); String users = "zhanghairun,pengcheng";
-	 * String[] userArr = users.split(","); List<String> strlist =
-	 * Arrays.asList(userArr); map1.put("mentioned_list", strlist);
-	 * map1.put("content", "实时新增用户反馈");
-	 * 
-	 * map.put("msgtype", "text"); map.put("text", map1);
-	 * 
-	 *//**
-		 * 获取参数对象 发送post
-		 *//*
-			 * 
-			 * JSONObject obj = JSONObject.parseObject(JSON.toJSONString(map));
-			 * 
-			 * Object result2 = HttpClientService.sendPost(url, obj);
-			 * 
-			 * System.out.println("POST返回信息：" + result2); }
-			 */
-
 }

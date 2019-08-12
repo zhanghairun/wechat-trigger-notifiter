@@ -1,14 +1,13 @@
-package hudson.plugins.wechattrigger;
+package com.plugins.wechattrigger;
 
 import java.io.IOException;
-
 import org.kohsuke.stapler.DataBoundConstructor;
-
 import hudson.Extension;
 import hudson.Launcher;
 import hudson.model.AbstractBuild;
 import hudson.model.AbstractProject;
 import hudson.model.BuildListener;
+import hudson.model.Run;
 import hudson.model.TaskListener;
 import hudson.tasks.BuildStepDescriptor;
 import hudson.tasks.BuildStepMonitor;
@@ -57,7 +56,12 @@ public class WeChatNotifier extends Notifier {
 		this.sendContent = sendContent;
 	}
 
-	public WeChatService newWeChatService(AbstractBuild build, TaskListener listener) {
+	/*
+	 * public WeChatService newWeChatService(AbstractBuild build, TaskListener
+	 * listener) { return new WeChatServiceImpl(disableWeChatNotifier, buildStatus,
+	 * wechatId, sendUsers, sendContent, listener, build); }
+	 */
+	public WeChatService newWeChatService(Run<?, ?> build, TaskListener listener) {
 		return new WeChatServiceImpl(disableWeChatNotifier, buildStatus, wechatId, sendUsers, sendContent, listener, build);
 	}
 
@@ -68,13 +72,9 @@ public class WeChatNotifier extends Notifier {
 
 	@Override
 	public boolean perform(AbstractBuild<?, ?> build, Launcher launcher, BuildListener listener) throws InterruptedException, IOException {
-		/*
-		 * if (buildStatus.isMet(build.getResult())) {
-		 * System.out.print("11111111111111111"); }
-		 */
-
 		return true;
 	}
+
 
 	@Override
 	public DingdingNotifierDescriptor getDescriptor() {

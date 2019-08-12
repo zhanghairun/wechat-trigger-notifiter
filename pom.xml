@@ -7,18 +7,35 @@
 		<relativePath />
 	</parent>
 
-	<groupId>hudson.plugins.wechattrigger</groupId>
+	<groupId>com.plugins.wechattrigger</groupId>
 	<artifactId>wechat-trigger-plugin</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>hpi</packaging>
 	<name>Jenkins Wechat Trigger Plugin</name>
+	<description>企业微信Jenkins通知插件</description>
+	<!-- <url>https://wiki.jenkins-ci.org/display/JENKINS/Dingding+Notification+Plugin</url> -->
 
-<!-- 	<licenses>
+	<!-- <licenses>
 		<license>
 			<name>MIT License</name>
 			<url>http://opensource.org/licenses/MIT</url>
 		</license>
 	</licenses> -->
+
+	<!-- <scm>
+		<connection>scm:git:ssh://github.com/jenkinsci/wechat-trigger-plugin.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com/jenkinsci/wechat-trigger-plugin.git</developerConnection>
+		<url>http://github.com/jenkinsci/wechat-trigger-plugin</url>
+		<tag>wechat-trigger-plugin-1.0</tag>
+	</scm> -->
+
+	<developers>
+		<developer>
+			<id>zhanghairun</id>
+			<name>Marvin Zhang</name>
+			<email>zhanghr7@163.com</email>
+		</developer>
+	</developers>
 
 	<dependencies>
 		<dependency>
@@ -58,6 +75,6 @@
 		<java.level>8</java.level>
 		<findbugs.failOnError>false</findbugs.failOnError>
 	</properties>
-	
+
 </project>  
 
