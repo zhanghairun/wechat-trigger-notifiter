@@ -5,23 +5,17 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.Map.Entry;
-
+import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-
 import hudson.EnvVars;
-import hudson.model.AbstractBuild;
 import hudson.model.Run;
 import hudson.model.TaskListener;
 import jenkins.model.Jenkins;
 
-/**
- * Created by Marvin on 16/10/8.
- */
 public class WeChatServiceImpl extends AbstractBuildParameters implements WeChatService {
 
 	private Logger logger = LoggerFactory.getLogger(WeChatService.class);
@@ -32,7 +26,7 @@ public class WeChatServiceImpl extends AbstractBuildParameters implements WeChat
 	private String sendUsers;
 	private String sendContent;
 	private TaskListener listener;
-	//private AbstractBuild build;
+	// private AbstractBuild build;
 	private Run<?, ?> build;
 
 	private static final String apiUrl = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=";
@@ -73,14 +67,14 @@ public class WeChatServiceImpl extends AbstractBuildParameters implements WeChat
 					mapData.put("msgtype", "text");
 					mapData.put("text", mapText);
 					JSONObject obj = JSONObject.parseObject(JSON.toJSONString(mapData));
-					Object result2 = HttpClientService.sendPost(url, obj);
-					logger.info("企业微信消息发送结果:" + result2);
+					// Object result2 = HttpClientService.sendPost(url, obj);
+					// logger.info("企业微信消息发送结果:" + result2);
 				} catch (Exception e) {
 					logger.info(e.getMessage());
 					e.printStackTrace();
 				}
 			}
-		}else {
+		} else {
 			logger.info("企业微信消息已禁止发送");
 		}
 
@@ -114,7 +108,7 @@ public class WeChatServiceImpl extends AbstractBuildParameters implements WeChat
 		for (Entry<String, String> entry : sets) {
 			System.out.println(entry.getKey() + ":" + entry.getValue());
 		}
-		System.out.println("企业微信消息发送结果:"+content);
+		System.out.println("企业微信消息发送结果:" + content);
 		return content;
 	}
 

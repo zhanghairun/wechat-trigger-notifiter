@@ -3,7 +3,6 @@ package com.plugins.wechattrigger;
 import javax.annotation.CheckForNull;
 import javax.annotation.Nonnull;
 
-import hudson.model.AbstractBuild;
 import hudson.model.Result;
 import hudson.model.Run;
 import hudson.model.TaskListener;

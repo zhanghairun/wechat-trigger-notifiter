@@ -1,17 +1,15 @@
 package com.plugins.wechattrigger;
 
+import java.io.IOException;
 import hudson.EnvVars;
 import hudson.ExtensionPoint;
-import hudson.model.AbstractBuild;
 import hudson.model.AbstractDescribableImpl;
 import hudson.model.Action;
 import hudson.model.ParametersAction;
 import hudson.model.Queue;
 import hudson.model.Run;
-import hudson.model.Queue.Task;
 import hudson.model.TaskListener;
-
-import java.io.IOException;
+import hudson.model.Queue.Task;
 
 /**
  * Extension point to produce an {@link Action} to invoke child projects with.

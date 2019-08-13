@@ -8,13 +8,13 @@ import hudson.model.InvisibleAction;
  */
 public class CapturedEnvironmentAction extends InvisibleAction {
 
-    private final EnvVars env;
+	private final EnvVars env;
 
-    public CapturedEnvironmentAction(EnvVars env) {
-        this.env = env;
-    }
+	public CapturedEnvironmentAction(EnvVars env) {
+		this.env = env;
+	}
 
-    public EnvVars getCapturedEnvironment() {
-        return env;
-    }
+	public EnvVars getCapturedEnvironment() {
+		return env;
+	}
 }

@@ -75,7 +75,6 @@ public class WeChatNotifier extends Notifier {
 		return true;
 	}
 
-
 	@Override
 	public DingdingNotifierDescriptor getDescriptor() {
 		return (DingdingNotifierDescriptor) super.getDescriptor();
@@ -95,10 +94,10 @@ public class WeChatNotifier extends Notifier {
 			return "WeChat Trigger Notifier";
 		}
 
-		// 设置默认值
-		public ResultCondition getDefaultBuildStatus() {
-			return ResultCondition.SUCCESS;
-		}
+		/*
+		 * // 设置默认值 public ResultCondition getDefaultBuildStatus() { return
+		 * ResultCondition.SUCCESS; }
+		 */
 
 	}
 }
