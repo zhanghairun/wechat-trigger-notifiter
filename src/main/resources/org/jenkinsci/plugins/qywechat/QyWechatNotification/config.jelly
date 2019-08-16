@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+    
+    <f:entry title="是否禁用通知" field="disableWeChatNotifier">
+     <f:checkbox checked="${instance.isTriggerFromChildProjects()}"/>
+    </f:entry>
+    
+    <f:entry  title="测试类型" field="testType">
+       <f:enum>${it.displayName}</f:enum>
+    </f:entry>
+  
+    <f:entry  title="构建状态" field="buildStatus">
+      <f:enum>${it.displayName}</f:enum>
+    </f:entry>
+    
+    <f:entry title="企信群ID" field="weChatId">
+        <f:textbox />
+    </f:entry>
+    
+    <f:entry title="通知UserID" field="mentionedId">
+        <f:textarea />
+    </f:entry>
+    
+    <f:entry title="发送内容" field="sendContent">
+     <f:textarea default="${instance.getSendContent()}" />
+    </f:entry>
+</j:jelly>

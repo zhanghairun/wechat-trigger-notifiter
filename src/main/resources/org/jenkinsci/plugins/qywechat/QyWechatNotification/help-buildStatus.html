@@ -1,0 +1,16 @@
+<div>选择对应的构建结果状态,给企业群发送消息！</div>
+<div>Always：无论构建的状态如何，总是在构建之后触发发送消息</div>
+<div>Aborted：如果构建状态“中止”，发送消息</div>
+<div>Success：如果构建状态为“成功”，发送消息</div>
+<div>Failure - Any：如果任何时候构建失败，都会发送消息</div>
+<div>Failure - 1st：当构建状态从“成功”更改为“失败”时，将发送消息</div>
+<div>Failure - 2nd：成功构建之后，当构建连续两次失败时，将发送消息</div>
+<div>Failure - 3ly：成功构建之后，当构建连续三次失败时，将发送消息</div>
+<div>Failure - Still：如果连续两次或多次构建的构建状态为“失败”，将发送消息</div>
+<div>Unstable (Test Failures)：当构建不稳定时，将发送消息</div>
+<div>Unstable (Test Failures) - 1st：当构建状态从任何状态更改为“不稳定”时，将发送消息</div>
+<div>Unstable (Test Failures) - Still：如果连续两次或多次构建的构建状态“不稳定”，将发送消息</div>
+<div>Unstable (Test Failures)/Failure -> Success：当构建状态从“失败”或“不稳定”更改为“成功”时，将发送消息</div>
+<div>Success, unstable or failed, but not aborted：如果当前构建结果为“成功”或“不稳定”或“失败”时，将发送消息</div>
+<div>Success or unstable but not failed：如果当前构建结果为“成功”或“不稳定”时，将发送消息</div>
+<div>Unstable or Failed but not Success：如果当前构建结果为“不稳定”或“失败”时，将发送消息</div>
